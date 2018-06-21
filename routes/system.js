@@ -9,7 +9,7 @@ router.post('/login', function(req, res, next){
 	let userInfo = req.body
 	// console.log('userInfo =>', userInfo)
 	User.findByUserName(userInfo['username'], function(err, userList){
-		// console.log('userList =>', userList)
+		console.log('login userList =>', userList)
 		if(err){
 			res.send({
 				success: false,
@@ -53,6 +53,7 @@ router.post('/login', function(req, res, next){
 router.post('/logup', function(req, res, next){
 	let userInfo = req.body
 	User.findByUserName(userInfo['username'], (err, userList)=>{
+		console.log('logup userList =>', userList)
 		if(err){
 			res.send({
 				success: false,
