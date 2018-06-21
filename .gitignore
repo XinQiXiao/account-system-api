@@ -1,0 +1,14 @@
+.idea/
+node_modules/
+build/
+*.log
+
+logs/
+/package-lock.json
+*._*
+
+# VSCode
+.vscode
+tsconfig.json
+jsconfig.json
+bundles/
