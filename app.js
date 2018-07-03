@@ -15,6 +15,7 @@ mongoose.connect(systemConfig.mongooseConnect, { useMongoClient: true })
 // router
 let routesAuth = require('./routes')
 let system = require('./routes/system')
+let products = require('./routes/products')
 
 let app = express()
 // trust first proxy
@@ -67,6 +68,7 @@ if (app.get('env') === 'development') {
 //统一权限拦截
 app.use(routesAuth)
 app.use('/system', system)
+app.use('/api/products', products)
 
 // 确保react-router刷新正确路由
 app.get('*', function (request, response) {

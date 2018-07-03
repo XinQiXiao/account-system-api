@@ -2,10 +2,10 @@ let mongoose =  require('mongoose')
 let Schema = mongoose.Schema
 
 let userSchema = new Schema({
-    username: String,
-    password: String,
-    salt: String,
-		admin: Boolean
+  username: String,
+  password: String,
+  salt: String,
+  admin: Boolean
 })
 
 // here can add same methods or statics
